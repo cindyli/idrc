@@ -73,6 +73,16 @@ module.exports = eleventyConfig => {
 			.slice(0, 10);
 	});
 
+	eleventyConfig.addCollection("resources", collection => {
+		return [
+			...collection.getFilteredByGlob("src/resources/*.md").sort((a, b) => a.data.title.localeCompare(b.data.title, undefined, {
+				ignorePunctuation: "true",
+				sensitivity: "base",
+				usage: "sort"
+			}))
+		];
+	});
+
 	eleventyConfig.setUseGitIgnore(false);
 
 	// Plugins.

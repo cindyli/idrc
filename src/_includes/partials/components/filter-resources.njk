@@ -1,0 +1,47 @@
+<div class="filter">
+  <h2>{{ filterHeading }}</h2>
+  {# Tag selections #}
+  {% set filterTitle = tagsFilterTitle %}
+  {% set filterType = "tags" %}
+  {% include 'partials/components/filter-resources-header.njk' %}
+
+  <div class="filter-body" data-section="tags">
+    <ul class="filter-choices">
+      {% for tag in resourceTags.resourceTags  %}
+        {% set tagId = tag.value %}
+        {# {% set tagId = tag.value | randomizeFilter %} #}
+        <li>
+          <input class="filter-checkbox" type="checkbox" id="{{ tagId }}" name="{{ 't_' + tag.value }}">
+          <label for="{{ tagId }}">{{ tag.label }}</label>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {# Media Type selections #}
+  {% set filterTitle = typesFilterTitle %}
+  {% set filterType = "media types" %}
+  {% include 'partials/components/filter-resources-header.njk' %}
+
+  <div class="filter-body" data-section="mediatypes">
+    <ul class="filter-choices">
+      {% for mediaType in resourceTypes.resourceTypes  %}
+        {% set typeId = mediaType.value %}
+        {# {% set typeId = mediaType.value | randomizeFilter %} #}
+        <li>
+          <input class="filter-checkbox" type="checkbox" id="{{ typeId }}" name="{{ 'm_' + mediaType.value }}">
+          <label for="{{ typeId }}">{{ mediaType.value }}</label>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="filter-buttons">
+    <button class="apply-button" type="submit">
+      <svg><use xlink:href="#apply" /></svg><span>Apply Filters</span>
+    </button>
+    <button class="reset-button" type="button">
+      <svg><use xlink:href="#reset" /></svg><span>Reset Filters</span>
+    </button>
+  </div>
+</div>

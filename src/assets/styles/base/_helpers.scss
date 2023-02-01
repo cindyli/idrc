@@ -5,6 +5,12 @@
   @include visually-hidden;
 }
 
+// style for centering children of some buttons
+%has-vertically-centered-children {
+	align-items: center;
+	display: flex;
+}
+
 .container,
 .wrapper {
   margin-left: auto;

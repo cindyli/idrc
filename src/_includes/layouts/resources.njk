@@ -1,0 +1,99 @@
+{% extends 'layouts/base.njk' %}
+
+{% set pageType = 'page--resources' %}
+
+{% block content %}
+  {# TODO: dedupe this declaration #}
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="placeholder" viewBox="-4 -4 224 224">
+      {% include 'svg/placeholder.svg' %}
+    </symbol>
+    <symbol id="arrowup" viewBox="0 0 39 23">
+      {% include 'svg/arrowup.svg' %}
+    </symbol>
+    <symbol id="arrowdown" viewBox="0 0 39 24">
+      {% include 'svg/arrowdown.svg' %}
+    </symbol>
+    <symbol id="apply" viewBox="0 0 26 26" fill="none">
+      {% include 'svg/apply.svg' %}
+    </symbol>
+    <symbol id="reset" viewBox="0 0 26 26" fill="none">
+      {% include 'svg/reset.svg' %}
+    </symbol>
+
+    {# for the tile items #}
+    <symbol id="media-type" viewBox="0 0 16 16">
+      {% include 'svg/media-type.svg' %}
+    </symbol>
+    <symbol id="readability" viewBox="0 0 18 18">
+      {% include 'svg/readability.svg' %}
+    </symbol>
+    <symbol id="tags" viewBox="0 0 19 17">
+      {% include 'svg/tags.svg' %}
+    </symbol>
+    <symbol id="topics" viewBox="0 0 15 15">
+      {% include 'svg/topics.svg' %}
+    </symbol>
+  </svg>
+
+  {# The .static-view container is used by Eleventy for building initial static resources pages for fast page rendering. 
+  Once a search and/or filter is performed, search results are rendered in .dynamic-view container #}
+  <article class="resources static-view">
+    {% include 'partials/components/page-header.njk' %}
+    <form method="get" action="/resources/">
+      {# TODO: review the language used for search instruction and labelling #}
+      {% set placeholderForSearch = "Search resources..." %}
+      {% set ariaLabelForSearch = "Enter keywords for a search in resources" %}
+      {% include 'partials/components/search-container.njk' %}
+
+      {% set filterHeading = "Filters" %}
+      {% set topicsFilterTitle = "Topics" %}
+      {% set topicsFilterClearLabel = "Clear all topics" %}
+      {% set tagsFilterTitle = "Tags" %}
+      {% set tagsFilterClearLabel = "Clear all tags" %}
+      {% set typesFilterTitle = "Media Types" %}
+      {% set typesFilterClearLabel = "Clear all media types" %}
+      {% set filterAction = "/resources/" %}
+      {% include 'partials/components/filter-resources.njk' %}
+    </form>
+
+    <h3 class="search-result" role="status"></h3>
+
+    <div class="search-term-container" v-if="searchTerm">
+      <h4 class="search-for-title">Search Term:</h4>
+      <p class="search-term"></p>
+    </div>
+
+    <div class="api-content">
+    </div>
+
+    <nav class="pagination" aria-label="pagination">
+    </nav>
+
+    {# <div class="api-content">
+      {% for item in pagination.items %}
+        {% set tileURL = item.url %}
+        {% set title = item.data.title %}
+        {% set source = item.data.source %}
+        {% set mediaType = item.data.type %}
+        {% set readabilityList = item.data.readability %}
+        {% set focus = item.data.focus %}
+        {% set tags = item.data.learnTags %}
+        {% set summary = item.data.summary %}
+        {% include "partials/components/tile-item-resource.njk" %}
+      {% endfor %}
+    </div>
+
+    {% if pagination.pages.length > 1 %}
+      {% include 'partials/components/pagination.njk' %}
+    {% endif %} #}
+  </article>
+
+{% endblock %}
+
+{% block footerScripts %}
+{# <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> #}
+{# <script src="/js/utils.js"></script> #}
+<script src="/assets/scripts/resources-dynamic-handler.js" defer></script>
+{% endblock %}

@@ -1,6 +1,6 @@
 ---
-layout: layouts/news.njk
 title: News
+layout: layouts/news.njk
 eleventyNavigation:
   key: News
   parent: About

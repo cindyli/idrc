@@ -1,6 +1,6 @@
 ---
-layout: layouts/ideas.njk
 title: Ideas
+layout: layouts/ideas.njk
 intro: Thoughts, ideas, and reflections based on our work in the field. 
 eleventyNavigation:
   key: Ideas
