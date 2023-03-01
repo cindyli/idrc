@@ -20,6 +20,12 @@
     <symbol id="reset" viewBox="0 0 26 26" fill="none">
       {% include 'svg/reset.svg' %}
     </symbol>
+    <symbol id="previous" viewBox="0 0 26 26" fill="none">
+      {% include 'svg/previous.svg' %}
+    </symbol>
+    <symbol id="next" viewBox="0 0 26 26" fill="none">
+      {% include 'svg/next.svg' %}
+    </symbol>
 
     {# for the tile items #}
     <symbol id="media-type" viewBox="0 0 16 16">
@@ -38,7 +44,7 @@
 
   {# The .static-view container is used by Eleventy for building initial static resources pages for fast page rendering. 
   Once a search and/or filter is performed, search results are rendered in .dynamic-view container #}
-  <article class="resources static-view">
+  <article>
     {% include 'partials/components/page-header.njk' %}
     <form method="get" action="/resources/">
       {# TODO: review the language used for search instruction and labelling #}
@@ -59,12 +65,12 @@
 
     <h3 class="search-result" role="status"></h3>
 
-    <div class="search-term-container" v-if="searchTerm">
+    <div class="search-term-container">
       <h4 class="search-for-title">Search Term:</h4>
       <p class="search-term"></p>
     </div>
 
-    <div class="api-content">
+    <div class="content">
     </div>
 
     <nav class="pagination" aria-label="pagination">
@@ -94,6 +100,6 @@
 {% block footerScripts %}
 {# <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> #}
-{# <script src="/js/utils.js"></script> #}
+<script src="/assets/scripts/resources-utils.js"></script>
 <script src="/assets/scripts/resources-dynamic-handler.js" defer></script>
 {% endblock %}
