@@ -1,5 +1,49 @@
 # Changelog
 
+## [1.5.0](https://github.com/cindyli/idrc/compare/v1.4.0...v1.5.0) (2023-06-20)
+
+
+### Features
+
+* add multilingual support to projects content type (resolves [#627](https://github.com/cindyli/idrc/issues/627), [#628](https://github.com/cindyli/idrc/issues/628), [#629](https://github.com/cindyli/idrc/issues/629)) ([#630](https://github.com/cindyli/idrc/issues/630)) ([de3a1fb](https://github.com/cindyli/idrc/commit/de3a1fb3993760eca85b793632900ad5205a0288))
+* add toggle to allow news and ideas to be archived ([#635](https://github.com/cindyli/idrc/issues/635)) (resolves [#170](https://github.com/cindyli/idrc/issues/170)) ([7b79c75](https://github.com/cindyli/idrc/commit/7b79c755f51d67c2161e32116652ea35a1cbc8a4))
+* Redirect achecker.ca to primary domain ([#331](https://github.com/cindyli/idrc/issues/331)) ([4293fae](https://github.com/cindyli/idrc/commit/4293fae1711467882ab85b234f70f706b213ce04))
+* redirect legacy 443-whatisinclusivedesign to /about/philosophy/ ([#424](https://github.com/cindyli/idrc/issues/424)) ([fa80d59](https://github.com/cindyli/idrc/commit/fa80d5906db6ef044bfa2fa4fecdfe5948f46c15))
+* update projects, add Weavly and TAE ([#405](https://github.com/cindyli/idrc/issues/405)) ([7c50b76](https://github.com/cindyli/idrc/commit/7c50b76fac6aa468d15222b5ab79113ae1b29393))
+
+
+### Bug Fixes
+
+* add Infusion core CSS ([2b4e117](https://github.com/cindyli/idrc/commit/2b4e1171fb21b9fc3d2cef968d440b22ad9b5771))
+* Add svg tags around the logo svg ([#621](https://github.com/cindyli/idrc/issues/621)) ([ca7fadb](https://github.com/cindyli/idrc/commit/ca7fadb7636b5fdbfb6c7d600efec6f83a8382d0))
+* fix distorted project thumbnails when resizing screen ([#506](https://github.com/cindyli/idrc/issues/506)) (resolved [#498](https://github.com/cindyli/idrc/issues/498)) ([2d29071](https://github.com/cindyli/idrc/commit/2d29071c872caa16144e9014a9b1a58670b4ec9f))
+* fix lighthouse CI failures ([#509](https://github.com/cindyli/idrc/issues/509)) ([91042a7](https://github.com/cindyli/idrc/commit/91042a70eefc47863c51d8569c6c767b54924029))
+* fix the display order of project "Communication Access within the Accessible Canada Act" ([d0176b1](https://github.com/cindyli/idrc/commit/d0176b1e909a6620f48c816630ff592d5e08bb4b))
+* merge conflict with main contents to dev ([5b9fb14](https://github.com/cindyli/idrc/commit/5b9fb14a587e5e54fbe9c9738e8a83cb86e987b4))
+* modify csp to allow cdn.jsdelivr.net ([3a565ef](https://github.com/cindyli/idrc/commit/3a565efe98da97d1da590030bd111d4beb55a1fa))
+* modify csp to allow cdn.jsdelivr.net ([53d40ed](https://github.com/cindyli/idrc/commit/53d40edfa1420741902e4be8ade200b554f06e03))
+* modify csp to allow unsafe-eval ([9da9516](https://github.com/cindyli/idrc/commit/9da9516e8c9247467eb8d3c47ed7c1fc3d9475b6))
+* modify csp to allow unsafe-eval ([4f24584](https://github.com/cindyli/idrc/commit/4f24584425d8c58808eb708bcf0447cf7fece226))
+* overflow ([5b53ff1](https://github.com/cindyli/idrc/commit/5b53ff1f37b998d01290d79ad49d9085bf58d218))
+* page with no sections ([95020c8](https://github.com/cindyli/idrc/commit/95020c84b8178c75b59ca44e6d57e8c4af0e4265))
+* page with no sections ([89c58ca](https://github.com/cindyli/idrc/commit/89c58cacf8688c5c83cc9608aef4a9a3c337989e))
+* parse transform ([526d9b7](https://github.com/cindyli/idrc/commit/526d9b773ef7efb49364a2328da6b422c8f6541b))
+* reduce breakpoint to small for nav bar banner ([#622](https://github.com/cindyli/idrc/issues/622)) ([d09d4e1](https://github.com/cindyli/idrc/commit/d09d4e159c0e840234177fb6b90d58fecba73363))
+* remove csp header ([321a9f4](https://github.com/cindyli/idrc/commit/321a9f4627897c9f100493f3fb40d66aac083d34))
+* remove csp header ([ec8d007](https://github.com/cindyli/idrc/commit/ec8d007df8211eeb2050c9f13fd54ff832626a46))
+* remove images from project and tool short descriptions ([#202](https://github.com/cindyli/idrc/issues/202)) ([0cf5de6](https://github.com/cindyli/idrc/commit/0cf5de6ffbf9fa2be8c5b0c8f78cd1d2c155b7ef))
+* resolve critical error in CMS ([a30056a](https://github.com/cindyli/idrc/commit/a30056a4f2b0ebe847984081b21bca27b8e1a866))
+* resolve linting errors ([1466270](https://github.com/cindyli/idrc/commit/146627058cdc06fff4980b58c86b9aac7069da7a))
+* resolve mixed content error ([afb9e26](https://github.com/cindyli/idrc/commit/afb9e2695c0cbaa32514688a86aedde5a13b6374))
+* restore build ([f0f3e90](https://github.com/cindyli/idrc/commit/f0f3e90e44b9a391183310154da408fccaec3920))
+* restore CMS functionality ([5cc4192](https://github.com/cindyli/idrc/commit/5cc4192e54480f50fcf891982e2320df104b3a13))
+* restore CMS previews ([#148](https://github.com/cindyli/idrc/issues/148)) ([80877e4](https://github.com/cindyli/idrc/commit/80877e4bd024dab5cacb4e4a696b87c2a07ade11))
+* Update collections' permalink to use file name ([#620](https://github.com/cindyli/idrc/issues/620)) (resolves [#514](https://github.com/cindyli/idrc/issues/514)) ([567ad22](https://github.com/cindyli/idrc/commit/567ad224dfd699bebb9f41c7479ff9092f5950e1))
+* update phone number ([#266](https://github.com/cindyli/idrc/issues/266)) ([e37fd19](https://github.com/cindyli/idrc/commit/e37fd19fd2c65baf85c6ccd60a9e2e5ccf56db41))
+* Update projects listing to use project name (resolves [#539](https://github.com/cindyli/idrc/issues/539)) ([#541](https://github.com/cindyli/idrc/issues/541)) ([a15f851](https://github.com/cindyli/idrc/commit/a15f8519cf8b8ca2a92f7397b140b0ea542aeaf5))
+* update syntax in permalinks ([2947e09](https://github.com/cindyli/idrc/commit/2947e0974b04df2937ba8c3cb63ca4ee8964fa7a))
+* use project-specific Markdown filter (resolves [#634](https://github.com/cindyli/idrc/issues/634)) ([#636](https://github.com/cindyli/idrc/issues/636)) ([9ebe519](https://github.com/cindyli/idrc/commit/9ebe519d34c4ccfb938407c65d75202a8b76965f))
+
 ## [1.4.0](https://github.com/inclusive-design/idrc/compare/v1.3.1...v1.4.0) (2022-10-26)
 
 
